@@ -84,7 +84,7 @@ body {
     box-shadow: 0 0 12px rgba(0, 0, 0, .5);
 }
 
-.fs-bold { font-weight: bold; }
+.fw-bold { font-weight: bold; }
 
 .input-group label {
     font-size: 14px;
