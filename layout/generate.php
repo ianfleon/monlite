@@ -14,7 +14,6 @@ if (isset($_POST['btn_generate'])) {
     $data['batas_jam'] = $_POST['batas_jam'];
 
     if ($_POST['batas_jam'] != 0 && $_POST['batas_menit']) {
-        header('Location: /');
         echo '<meta http-equiv="refresh" content="1; URL=/" />';
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-require_once('lib\routeros_api.class.php');
+require_once('lib/routeros_api.class.php');
 require_once('config.php');
 require_once('Monlite.php');
 

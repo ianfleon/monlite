@@ -2,10 +2,8 @@
 
 /* Monlite v0.0 (Development/26082022) */
 
-require_once('lib\routeros_api.class.php'); // RouterOSAPI
+require_once('lib/routeros_api.class.php'); // RouterOSAPI
 require_once('config.php'); // RouterOS SU Configuration.
-
-// include_once('./lib/formatbytesbites.php');
 
 class Monlite {
 

@@ -9,5 +9,4 @@ foreach ($alluser as $user) {
     
 }
 
-header('Location: /');
-echo '<meta http-equiv="refresh" content="1; URL=/" />';
+echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';

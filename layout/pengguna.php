@@ -8,11 +8,9 @@ if (isset($_GET['hapus'])) {
     $result = $Monlite->get_user_by_name($_GET['hapus']);
 
     if (count($result) > 0) {
-        foreach ($result as $user) {
-            $Monlite->delete_user_by_id($user['.id']);
-        }
+        $Monlite->delete_user_by_id($result[0]['.id']);
     } else {
-        header('Location: /');
+        echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
     }
 }
 
