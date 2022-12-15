@@ -11,12 +11,6 @@ if (isset($_POST['btn_generate'])) {
     }
 
     $data['profile'] = 'PAKETMIDAHS';
-    $data['batas_jam'] = $_POST['batas_jam'];
-
-    if ($_POST['batas_jam'] != 0 && $_POST['batas_menit']) {
-        echo '<meta http-equiv="refresh" content="1; URL=/" />';
-    }
-
     $data['limit_uptime'] = $_POST['batas_jam'] . 'h' . $_POST['batas_menit'] . 'm';
     
     for ($i = 0; $i<$jumlah; $i++) {
@@ -31,6 +25,9 @@ if (isset($_POST['btn_generate'])) {
             $Monlite->add_user($data);
         }
     }
+
+    echo "<script>alert('Voucher berhasil dibuat!')</script>";
+    echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
 
 }
 
