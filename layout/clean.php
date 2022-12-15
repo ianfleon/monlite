@@ -9,4 +9,11 @@ foreach ($alluser as $user) {
     
 }
 
-echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
+echo '<meta http-equiv="refresh" content="3; URL=/dashboard.php?layout=pengguna" />';
+
+?>
+
+<div class="text-center">
+    <img src="svg/cleanuser.svg" width="100%" alt=""/>
+    <p>Sedang membersihkan voucher expired..</p>
+</div>
