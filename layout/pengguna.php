@@ -21,7 +21,7 @@ if (isset($_GET['vc'])) {
     $vc = $_GET['vc'];
     $option_vc_active = $vc;
     if ($vc != 'all') {
-        $myusers = $Monlite->get_users_by('comment', $vc); 
+        $myusers = $Monlite->get_users_by('comment', $vc);
     }
 }
 
@@ -34,11 +34,10 @@ foreach ($users as $key => $user) {
 ?>
 
 <div class="container">
-    
-    <div class="card-wrapper">
 
+    <div class="mt-4">
         <form action="" method="GET">
-            <input type="hidden" name="layout" value="pengguna"/>
+            <input type="hidden" name="layout" value="pengguna" />
             <div class="input-group mb-4">
                 <div class="row">
                     <select name="vc" id="vc" class="form-control w-70">
@@ -51,6 +50,12 @@ foreach ($users as $key => $user) {
                 </div>
             </div>
         </form>
+    </div>
+
+    <p class="mb-4 text-muted fs-small">Total: <?= count($myusers); ?>
+    </p>
+
+    <div class="card-wrapper">
 
         <!-- Card Users -->
         <?php foreach ($myusers as $user) : ?>

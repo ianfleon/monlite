@@ -28,7 +28,7 @@ if (isset($_POST['btn_generate'])) {
     }
 
     echo "<script>alert('Voucher berhasil dibuat!')</script>";
-    // echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
+    echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
 
 }
 
@@ -37,11 +37,11 @@ if (isset($_POST['btn_generate'])) {
 <div class="container mt-4">
     <form action="" method="POST">
         <div class="input-group mb-4">
-            <label for="jumlah" class="d-block mb-4 form-label fs-bold">Jumlah Voucher</label>
+            <label for="jumlah" class="d-block mb-4 form-label fw-bold">Jumlah Voucher</label>
             <input type="number" name="jumlah" class="form-control" autocomplete="off" required />
         </div>
         <div class="input-group mb-4">
-            <label for="batas" class="d-block mb-4 fs-bold">Batas Waktu</label>
+            <label for="batas" class="d-block mb-4 fw-bold">Batas Waktu</label>
             <div class="row align-items-center">
                 <input type="number" name="batas_jam" class="form-control w-40 mr-4" autocomplete="off" required />
                 <p>Jam</p>
