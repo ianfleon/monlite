@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST['btn_generate'])) {
-    
+
     $jumlah = $_POST['jumlah'];
 
     if ($jumlah > 10) {
@@ -11,9 +11,10 @@ if (isset($_POST['btn_generate'])) {
     }
 
     $data['profile'] = 'PAKETMIDAHS';
+    $data['comment'] = 'vc-' . $_POST['batas_jam'];
     $data['limit_uptime'] = $_POST['batas_jam'] . 'h' . $_POST['batas_menit'] . 'm';
-    
-    for ($i = 0; $i<$jumlah; $i++) {
+
+    for ($i = 0; $i < $jumlah; $i++) {
         $data['name'] = $_POST['batas_jam'] . '-' . randN(3);
         if (count($Monlite->get_user_by_name($data['name'])) > 0) {
             if ($i != 0) {
@@ -27,7 +28,7 @@ if (isset($_POST['btn_generate'])) {
     }
 
     echo "<script>alert('Voucher berhasil dibuat!')</script>";
-    echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
+    // echo '<meta http-equiv="refresh" content="1; URL=/dashboard.php?layout=pengguna" />';
 
 }
 
@@ -37,18 +38,18 @@ if (isset($_POST['btn_generate'])) {
     <form action="" method="POST">
         <div class="input-group mb-4">
             <label for="jumlah" class="d-block mb-4 form-label fs-bold">Jumlah Voucher</label>
-            <input type="number" name="jumlah" class="form-control" required />
+            <input type="number" name="jumlah" class="form-control" autocomplete="off" required />
         </div>
         <div class="input-group mb-4">
             <label for="batas" class="d-block mb-4 fs-bold">Batas Waktu</label>
             <div class="row align-items-center">
-                <input type="number" name="batas_jam" class="form-control w-40 mr-4" required />
+                <input type="number" name="batas_jam" class="form-control w-40 mr-4" autocomplete="off" required />
                 <p>Jam</p>
             </div>
         </div>
         <div class="input-group mb-4">
             <div class="row align-items-center">
-                <input type="number" name="batas_menit" class="form-control w-40 mr-4" required />
+                <input type="number" name="batas_menit" class="form-control w-40 mr-4" autocomplete="off" required />
                 <p>Menit</p>
             </div>
         </div>
