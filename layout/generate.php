@@ -45,13 +45,13 @@ if (isset($_POST['btn_generate'])) {
         <div class="input-group mb-4">
             <label for="batas" class="d-block mb-4 fs-bold">Batas Waktu</label>
             <div class="row align-items-center">
-                <input type="text" name="batas_jam" class="form-control w-40 mr-4" required />
+                <input type="number" name="batas_jam" class="form-control w-40 mr-4" required />
                 <p>Jam</p>
             </div>
         </div>
         <div class="input-group mb-4">
             <div class="row align-items-center">
-                <input type="text" name="batas_menit" class="form-control w-40 mr-4" required />
+                <input type="number" name="batas_menit" class="form-control w-40 mr-4" required />
                 <p>Menit</p>
             </div>
         </div>
