@@ -78,7 +78,7 @@ class Monlite {
             'password' => $data['name'],
             'profile' => $data['profile'],
             'limit-uptime' => $data['limit_uptime'],
-            'comment' => 'vc-' . $data['batas_jam']
+            'comment' => $data['comment']
         ));
 
     }
